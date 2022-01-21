@@ -22,7 +22,7 @@ require("./models/user");
 
 app.use(cors());
 app.use(express.json());
-app.use("/test", () => {
+app.use("/test", (req, res) => {
   res.send("<h1>TEST</h1>");
 });
 
