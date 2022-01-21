@@ -146,7 +146,7 @@ router.get("/posts/:postId", requireLogin, (req, res) => {
 });
 
 //For getting all the Posts
-router.get("/all_posts", requireLogin, (req, res) => {
+router.get("/all_posts", (req, res) => {
   Post.find()
     .sort({ created_at: "Asc" })
     .then((posts) => {
