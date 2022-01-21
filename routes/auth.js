@@ -44,6 +44,8 @@ router.post("/signup", (req, res) => {
 //For Authentication the User
 router.post("/authenticate", (req, res) => {
   const { email, password } = req.body;
+  console.log(email, password);
+
   if (!email || !password) {
     return res.status(422).json({ error: "please add email and password" });
   }
