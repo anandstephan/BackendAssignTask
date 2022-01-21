@@ -22,6 +22,9 @@ require("./models/user");
 
 app.use(cors());
 app.use(express.json());
+app.use("/test", () => {
+  res.send("<h1>TEST</h1>");
+});
 
 app.use("/api", require("./routes/auth"));
 app.use("/api", require("./routes/post"));
